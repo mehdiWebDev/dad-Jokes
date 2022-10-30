@@ -15,8 +15,7 @@ class JokeList extends Component {
     constructor(props){
         super(props);
         this.state={jokes: JSON.parse(localStorage.getItem("jokes")|| "[]"),loading:false };
-        
-        console.log("ok")
+    
       
         this.getJokes=this.getJokes.bind(this)
 
@@ -27,7 +26,7 @@ class JokeList extends Component {
   componentDidMount(){
 
     
-      if(this.state.jokes.length == 0){
+      if(this.state.jokes.length === 0){
       
          this.getJokes()
  
